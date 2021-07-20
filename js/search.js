@@ -1,4 +1,9 @@
 // FETCH API FOR SEACRH
+
+function changetoSearch() {
+    window.location.replace('search.html');
+}
+
 let changeLandingPage = function () {
     localStorage.setItem('movieId', this.id);
     window.location.replace('landing-page.html');
@@ -9,9 +14,6 @@ if (movieNumbers) {
     document.querySelector('.cart span').textContent = movieNumbers;
 }
 
-function changetoSearch() {
-    window.location.replace('search.html');
-}
 
 function searchFilm() {
     // window.location.replace('search.html');

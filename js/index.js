@@ -44,3 +44,12 @@ document.querySelector("#LogOutUser").addEventListener("click", () => {
     localStorage.removeItem('movieNumbers');
     location.reload();
 })
+
+function changetoSearch() {
+    window.location.replace('search.html');
+}
+
+let movieNumbers = localStorage.getItem('movieNumbers');
+if (movieNumbers) {
+    document.querySelector('.cart span').textContent = movieNumbers;
+}

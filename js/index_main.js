@@ -71,10 +71,10 @@ fetch(`http://localhost:3000/movie_results`)
     }
 
 // Count movies
-let movieNumbers = localStorage.getItem('movieNumbers');
-if (movieNumbers) {
-    document.querySelector('.cart span').textContent = movieNumbers;
-}
+// let movieNumbers = localStorage.getItem('movieNumbers');
+// if (movieNumbers) {
+//     document.querySelector('.cart span').textContent = movieNumbers;
+// }
 
 
 // Log in Log out. Kiem tra xem da log in hay chua
