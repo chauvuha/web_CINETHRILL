@@ -2,7 +2,7 @@ let arrow = document.querySelectorAll('.arrow-slide');
 let suggestionList = document.querySelectorAll('.suggestion_list');
 let leftArrow = `<i class="fas fa-chevron-circle-left slide-arrow"></i>`;
 let rightArrow = `<i class="fas fa-chevron-circle-right slide-arrow"></i>`;
-let movieAPI = 'http://localhost:3000/movie_results';
+let movieAPI = 'https://movie-api791.herokuapp.com/api/movie_results';
 
 let trailerId;
 let reviewId;

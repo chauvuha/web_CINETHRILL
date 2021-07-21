@@ -47,7 +47,7 @@ const movie_titles = document.getElementsByClassName("movie-list-item-title");
 const movie_desc = document.getElementsByClassName("movie-list-item-desc");
 const movie_img = document.getElementsByClassName("movie-list-item-img");
 const movie_id1 = document.getElementsByClassName('movie-list-item-button');
-fetch(`http://localhost:3000/movie_results`)
+fetch(`https://movie-api791.herokuapp.com/api/movie_results`)
     .then(response => {
         return response.json();
     })

@@ -7,7 +7,7 @@ let changeLandingPage = function () {
 let movieArray = localStorage.getItem('moviesInCart');
 movieArray = JSON.parse(movieArray)
 
-fetch(`http://localhost:3000/movie_results`)
+fetch(`https://movie-api791.herokuapp.com/api/movie_results`)
     .then(response => {
         return response.json();
     })
