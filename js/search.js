@@ -33,7 +33,7 @@ function searchFilm() {
             console.log(dataListresult)
             console.log(datafullList[1].title)
             for (let i = 0; i < datafullList.length; i++) {
-                if (datafullList[i].title.includes(x) || datafullList[i].title.toLowerCase().includes(x)) {
+                if (datafullList[i].title.includes(x) || datafullList[i].title.toLowerCase().includes(x) || datafullList[i].title.toUpperCase().includes(x)) {
                     document.getElementById("movie_results").innerHTML += `<div class="movie_result">
                 <img class="movie-result-img" src="${datafullList[i].fanart}" alt="">
                 <div class="movie-result-info">
