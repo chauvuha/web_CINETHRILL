@@ -62,7 +62,6 @@ if (getLognin.innerText == 'undefined') {
 }
 
 document.querySelector("#LogOutUser").addEventListener("click", () => {
-    // e.preventDefault();
     console.log('xoa');
     let last_User = [];
     localStorage.setItem("last_User", JSON.stringify(last_User));

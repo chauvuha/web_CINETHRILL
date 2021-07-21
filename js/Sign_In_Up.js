@@ -40,10 +40,7 @@ document.querySelectorAll(".form__input-signUp").forEach(function (inputElement)
 
 //-----------Sign Up------------------------//
 
-
-// localStorage.setItem("solthem", JSON.stringify(0));
-
-if (JSON.parse(localStorage.getItem("infor_users")) == null){
+if (JSON.parse(localStorage.getItem("infor_users")) == null) {
     localStorage.setItem("infor_users", JSON.stringify([]));
 }
 
@@ -51,13 +48,22 @@ document.querySelector(".form__button-signUp").addEventListener("click", functio
 
     let inforJSON = localStorage.getItem("infor_users");
     let inforJSONConvert = JSON.parse(inforJSON);
-
     let users = {};
-    users.UserName = document.querySelector(".form__userName").value;
-    users.emailAddress = document.querySelector(".form__email").value;
-    users.password = document.querySelector(".form__password").value;
-    inforJSONConvert.push(users);
-    localStorage.setItem("infor_users", JSON.stringify(inforJSONConvert));
+    let formUsernameCreateAccount = document.getElementById("form_username-CreateAccount");
+    let formEmailcretaAccount = document.getElementById("form_email-cretaAccount");
+    let formPasswordCretaAccount = document.getElementById("form_password-cretaAccount");
+    let formConfirmPasswordCretaAccount = document.getElementById("form_confirmPassword-cretaAccount");
+    if (formUsernameCreateAccount.value == "" || formEmailcretaAccount.value == ""
+        || formPasswordCretaAccount.value == "" || formConfirmPasswordCretaAccount.value == "") {
+        alert("Complete the information")
+    } else {
+        users.UserName = document.querySelector(".form__userName").value;
+        users.emailAddress = document.querySelector(".form__email").value;
+        users.password = document.querySelector(".form__password").value;
+        inforJSONConvert.push(users);
+        localStorage.setItem("infor_users", JSON.stringify(inforJSONConvert));
+        window.location.reload()
+    }
 })
 
 //------------Sign In------------------------//
