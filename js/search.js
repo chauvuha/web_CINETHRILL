@@ -28,10 +28,12 @@ function searchFilm() {
             for (j = 0; j < data.length; j++) {
                 datafullList.push(...data[j])
             }
+            console.log(datafullList)
             const dataListresult = [];
             console.log(dataListresult)
+            console.log(datafullList[1].title)
             for (let i = 0; i < datafullList.length; i++) {
-                if (datafullList[i].title.includes(x) || datafullList[i].title.split("").includes(x)) {
+                if (datafullList[i].title.includes(x) || datafullList[i].title.toLowerCase().includes(x)) {
                     document.getElementById("movie_results").innerHTML += `<div class="movie_result">
                 <img class="movie-result-img" src="${datafullList[i].fanart}" alt="">
                 <div class="movie-result-info">
@@ -46,6 +48,7 @@ function searchFilm() {
                         movie_id[k].id = dataListresult[k].imdb_id;
                         movie_id[k].onclick = changeLandingPage;
                     }
+
                 }
             }
             if (dataListresult.length == 0) {
