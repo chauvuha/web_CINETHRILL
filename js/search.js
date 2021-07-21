@@ -52,7 +52,7 @@ function searchFilm() {
                 }
             }
             if (dataListresult.length == 0) {
-                document.getElementById("movie_results").innerHTML += `<h3> We cannot find any results </h3>`;
+                document.getElementById("movie_results").innerHTML += `<h3 class="list-message"> We cannot find any results </h3>`;
             }
         })
         .catch(err => {

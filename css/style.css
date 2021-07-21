@@ -202,7 +202,11 @@ h1 {
 }
 
 .list-header {
-    margin-left: 40px;
+    margin-left: 50px;
+}
+
+.list-message {
+    margin-left: 50px;
 }
 
 
