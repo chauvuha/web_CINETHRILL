@@ -13,5 +13,4 @@ menuBtn.onclick = () => {
 cancelBtn.onclick = () => {
     items.classList.remove("active");
     menuBtn.classList.remove("hide");
-    // cancelBtn.classList.remove("show");
 }

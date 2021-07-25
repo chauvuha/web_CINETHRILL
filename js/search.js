@@ -1,5 +1,4 @@
 // FETCH API FOR SEACRH
-
 function changetoSearch() {
     window.location.replace('search.html');
 }
@@ -24,13 +23,12 @@ function searchFilm() {
             return response.json();
         })
         .then((data) => {
+            console.log(data)
             const datafullList = [];
             for (j = 0; j < data.length; j++) {
                 datafullList.push(...data[j])
             }
-            console.log(datafullList)
             const dataListresult = [];
-            console.log(dataListresult)
             console.log(datafullList[1].title)
             for (let i = 0; i < datafullList.length; i++) {
                 if (datafullList[i].title.includes(x) || datafullList[i].title.toLowerCase().includes(x) || datafullList[i].title.toUpperCase().includes(x)) {
